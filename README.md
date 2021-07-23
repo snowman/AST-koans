@@ -5,6 +5,8 @@
 2. run test until match expectation
 # Playground !
 1. [AST explorer](https://astexplorer.net/)
+   You can toggle the visibility of properties in AST Explorer with the
+   checkboxes above the tree.
 2. [GoGoCode PlayGround](https://play.gogocode.io/)
 # Existing codemods
 1. [js-codemod no-vars](https://github.com/cpojer/js-codemod/#no-vars)
