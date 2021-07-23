@@ -1,10 +1,10 @@
 // transform.js
 const j = require('jscodeshift')
 
-function transform (file, api, options) {
-  console.log('transforming', file.path)
+function transform (fileInfo, api, options) {
+  console.log('transforming', fileInfo.path)
 
-  const parsed = j(file.source)
+  const parsed = j(fileInfo.source)
   const transformed = parsed
 
   const outputOptions = {
