@@ -15,18 +15,20 @@ const isRequireCalc = (node) =>
 function transform(file, api, options) {
   const parsed = j(file.source);
 
-  parsed
+  return parsed
     .find(j.CallExpression)
     .filter((path) => isRequireCalc(path.value))
     .forEach(function (path) {
       console.log(path.value);
-    });
+    })
+    .toSource({ quote: "single", trailingComma: true });
 
-  parsed
+  return parsed
     .find(j.CallExpression, { callee: { value: "require" } })
     .replaceWith(function (path) {
       return j.memberExpression(path.value, j.identifier("add"));
-    });
+    })
+    .toSource({ quote: "single", trailingComma: true });
 }
 
-export default transform
+export default transform;
