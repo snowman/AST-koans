@@ -23,3 +23,15 @@
 3. [Codemod scripts to transform code to next generation JS](https://github.com/cpojer/js-codemod/blob/master/transforms/no-vars.js)
 # some helper to help
 1. [A utility to help you explore jscodeshift](https://github.com/reergymerej/jscodeshift-helper#readme)
+
+# Example test data
+```js
+var foo
+foo = "foo"
+
+var bar
+bar = {foo: "foobar"}
+
+var g
+g = /abc/g
+```
