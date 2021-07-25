@@ -28,3 +28,5 @@ function transform(file, api, options) {
       return j.memberExpression(path.value, j.identifier("add"));
     });
 }
+
+export default transform
